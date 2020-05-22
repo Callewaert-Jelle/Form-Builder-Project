@@ -1,4 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+export enum DynamicTextInputTypes {
+  text = 'text',
+  number = 'number',
+  password = 'password',
+  email = 'email',
+  color = 'color'
+}
 
 @Component({
   selector: 'app-dynamic-text-input',
@@ -7,9 +15,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DynamicTextInputComponent implements OnInit {
 
+  @Input() placeholder?: string;
+  @Input() isDisabled?: boolean;
+  @Input() isReadonly?: boolean;
+  @Input() hasAutocomplete?: boolean;
+  @Input() type?: DynamicTextInputTypes;
+  @Input() pattern?: RegExp;
+
   constructor() { }
 
   ngOnInit() {
+    if (!this.type) {
+      this.type = DynamicTextInputTypes.text
+    }
   }
-
 }
