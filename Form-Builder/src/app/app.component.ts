@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DynamicTextInputTypes } from './jc-dynamic-form-builder/inputs/dynamic-text-input/dynamic-text-input.component';
-import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
+import { FormBuilder, FormArray } from '@angular/forms';
 import { JcFormBuilder } from './jc-dynamic-form-builder/jc-form-builder/jc-form-builder';
 
 @Component({
