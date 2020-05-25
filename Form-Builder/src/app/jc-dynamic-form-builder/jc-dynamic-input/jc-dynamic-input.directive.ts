@@ -9,7 +9,6 @@ export class JcDynamicInputDirective implements OnInit {
   mapper = {
     text: DynamicTextInputComponent
   }
-  @Input() input;
   @Input() group;
 
   private cRef: ComponentRef<any>
@@ -22,7 +21,6 @@ export class JcDynamicInputDirective implements OnInit {
   ngOnInit() {
     let factory = this.cfr.resolveComponentFactory(DynamicTextInputComponent);
     this.cRef = this.vcr.createComponent(factory);
-    this.cRef.instance.componentConfig = this.input;
     this.cRef.instance.group = this.group;
   }
 }

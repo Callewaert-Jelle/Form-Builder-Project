@@ -20,7 +20,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.formContainer = new JcFormBuilder(this.formBuilder).addTextInput('name').getResult(); // FormBuilder (pattern)
+    this.formContainer = new JcFormBuilder(this.formBuilder)
+      .addTextInput('name')
+      .addTextInput('email')
+      .addTextInput('more')
+      .getResult(); // FormBuilder (pattern)
     this.text_placeholder = "placeholder";
     this.text_type = DynamicTextInputTypes.text;
   }

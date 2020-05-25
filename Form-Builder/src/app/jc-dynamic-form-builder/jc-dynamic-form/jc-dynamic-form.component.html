@@ -1,5 +1,6 @@
 <form [formGroup]="formContainer">
-    <ng-container jcDynamicInput *ngFor="let input of inputs"
-    [input]="input"
+    <ng-container jcDynamicInput *ngFor="let control of formContainer.controls"
     [group]="formContainer"></ng-container>
 </form>
+
+<p *ngFor="let control of formContainer.controls">{{control.name}}</p>

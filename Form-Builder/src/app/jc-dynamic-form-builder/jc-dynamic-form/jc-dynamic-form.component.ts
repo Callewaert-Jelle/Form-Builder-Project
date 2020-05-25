@@ -8,12 +8,10 @@ import { FormGroup, FormBuilder, ReactiveFormsModule, FormArray } from '@angular
 export class DynamicFormComponent implements OnInit {
 
   @Input() formContainer: FormArray;
-  inputs: any[];
 
   constructor() {
   }
 
   ngOnInit() {
-    this.inputs = [this.formContainer.controls];
   }
 }
