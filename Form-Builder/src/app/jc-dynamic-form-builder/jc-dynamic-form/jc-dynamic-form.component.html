@@ -1,0 +1,5 @@
+<form [formGroup]="formContainer">
+    <ng-container jcDynamicInput *ngFor="let input of inputs"
+    [input]="input"
+    [group]="formContainer"></ng-container>
+</form>
