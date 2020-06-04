@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormArray } from '@angular/forms'
+import { JcFormGroup } from '../jc-form-elements/jc-form-group';
 
 @Component({
   selector: 'jc-dynamic-form',
@@ -7,11 +7,14 @@ import { FormArray } from '@angular/forms'
 })
 export class DynamicFormComponent implements OnInit {
 
-  @Input() formContainer: FormArray;
+  @Input() formContainer: JcFormGroup;
+  objectKeys = Object.keys;
+  objectEntries = Object.entries;
 
   constructor() {
   }
 
   ngOnInit() {
+    
   }
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DynamicTextInputTypes } from './jc-dynamic-form-builder/inputs/dynamic-text-input/dynamic-text-input.component';
-import { FormBuilder, FormArray } from '@angular/forms';
 import { JcFormBuilder } from './jc-dynamic-form-builder/jc-form-builder/jc-form-builder';
+import { JcFormGroup } from './jc-dynamic-form-builder/jc-form-elements/jc-form-group';
+import { JcTextInputOptions } from './jc-dynamic-form-builder/jc-input-options/jc-custom-input-options/jc-text-input-options';
 
 @Component({
   selector: 'app-root',
@@ -10,22 +11,20 @@ import { JcFormBuilder } from './jc-dynamic-form-builder/jc-form-builder/jc-form
 })
 export class AppComponent implements OnInit {
 
-  formContainer: FormArray; // FormGroup
+  formContainer: JcFormGroup;
 
   text_placeholder: string;
   text_type: DynamicTextInputTypes;
 
-  constructor(private formBuilder: FormBuilder) {
-
-  }
-
   ngOnInit() {
-    this.formContainer = new JcFormBuilder(this.formBuilder)
-      .addTextInput('name')
-      .addTextInput('email')
+    this.formContainer = new JcFormBuilder()
+      .addTextInput('name', new JcTextInputOptions()
+        .addValue('xD')
+        .addPlaceholder('xD'))
+      .addTextInput('email', new JcTextInputOptions()
+        .addType(DynamicTextInputTypes.password))
       .addTextInput('more')
-      .getResult(); // FormBuilder (pattern)
-    this.text_placeholder = "placeholder";
-    this.text_type = DynamicTextInputTypes.text;
+      .getResult();
+    console.log(this.formContainer)
   }
 }

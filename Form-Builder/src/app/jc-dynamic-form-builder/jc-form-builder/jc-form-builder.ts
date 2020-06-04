@@ -1,20 +1,30 @@
 import { FormBuilder, FormControl, Validators, FormArray } from '@angular/forms';
+import { JcFormControl } from '../jc-form-elements/jc-form-control';
+import { JcFormGroup } from '../jc-form-elements/jc-form-group';
+import { JcTextInputOptions } from '../jc-input-options/jc-custom-input-options/jc-text-input-options';
+import { IJcFormBuilder } from './ijc-form-builder';
 
-export class JcFormBuilder {
+export class JcFormBuilder implements IJcFormBuilder {
 
-    formArray: FormArray;
+    private jcFormGroup: JcFormGroup;
 
-    constructor(private formBuilder: FormBuilder) {
-        this.formArray = this.formBuilder.array([]);
+    constructor() {
+        this.jcFormGroup = new JcFormGroup({});
         return this;
     }
 
-    addTextInput(name: string) {
-        this.formArray.controls.push(new FormControl('', Validators.required));
+    addTextInput(name: string, options?: JcTextInputOptions): JcFormBuilder {
+        if (options) {
+            let jcFormControl = new JcFormControl(options.getValue(), [Validators.required]);
+            jcFormControl.addOptions(options);
+            this.jcFormGroup.addControl(name, jcFormControl)
+        } else { //empty formcontrol
+            this.jcFormGroup.addControl(name, new JcFormControl('', Validators.required));
+        }
         return this;
     }
 
-    getResult() {
-        return this.formArray;
+    getResult(): JcFormGroup {
+        return this.jcFormGroup;
     }
 }
