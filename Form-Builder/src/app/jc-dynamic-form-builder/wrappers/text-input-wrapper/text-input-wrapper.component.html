@@ -1,8 +1,16 @@
-<app-dynamic-text-input
-    [placeholder]='options?.placeholder'
-    [isDisabled]='options?.isDisabled'
-    [isReadonly]='options?.isReadonly'
-    [hasAutocomplete]='option?.hasAutocomplete'
-    [type]='options?.type'
-    [pattern]='option?.pattern'
-></app-dynamic-text-input>
+<div [formGroup]='jcFormGroup'>
+    <label>
+        {{jcFormControl.option?.label}}
+        <app-dynamic-text-input
+            [jcFormControl]='jcFormControl'
+
+            [placeholder]='jcFormControl.options?.placeholder'
+            [isDisabled]='jcFormControl.options?.isDisabled'
+            [isReadonly]='jcFormControl.options?.isReadonly'
+            [hasAutocomplete]='jcFormControl.option?.hasAutocomplete'
+            [type]='jcFormControl.options?.type'
+            [pattern]='jcFormControl.option?.pattern'
+        ></app-dynamic-text-input>
+        <!-- <validation [options]='options' [jcFormGroup]='jcFormGroup' -->
+    </label>
+</div>

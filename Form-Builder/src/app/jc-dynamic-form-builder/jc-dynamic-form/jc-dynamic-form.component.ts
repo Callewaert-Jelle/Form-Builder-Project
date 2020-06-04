@@ -7,7 +7,8 @@ import { JcFormGroup } from '../jc-form-elements/jc-form-group';
 })
 export class DynamicFormComponent implements OnInit {
 
-  @Input() formContainer: JcFormGroup;
+  @Input() jcFormGroup: JcFormGroup;
+  
   objectKeys = Object.keys;
   objectEntries = Object.entries;
 

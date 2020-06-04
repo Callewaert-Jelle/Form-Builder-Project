@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { JcInputOptions } from '../../jc-input-options/jc-input-options';
+import { JcFormGroup } from '../../jc-form-elements/jc-form-group';
+import { JcFormControl } from '../../jc-form-elements/jc-form-control';
 
 @Component({
   selector: 'app-text-input-wrapper',
@@ -8,12 +9,13 @@ import { JcInputOptions } from '../../jc-input-options/jc-input-options';
 })
 export class TextInputWrapperComponent implements OnInit {
 
-  @Input() group;
-  @Input() options: JcInputOptions;
+  @Input() jcFormGroup: JcFormGroup;
+  @Input() jcFormControl: JcFormControl;
 
   constructor() { }
 
   ngOnInit() {
+    // console.log(this.jcFormGroup)
   }
 
 }

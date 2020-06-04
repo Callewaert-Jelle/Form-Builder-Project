@@ -6,13 +6,9 @@ export class JcInputOptions {
     private value?: any;
     private validators?: ValidatorFn;
 
-    addLabel(label: string) {
+    constructor(label: string, value: string) {
         this.label = label;
-        return this;
-    }
-    addValue(value: any) {
         this.value = value;
-        return this;
     }
     addValidators(validators: ValidatorFn) {
         this.validators = validators;

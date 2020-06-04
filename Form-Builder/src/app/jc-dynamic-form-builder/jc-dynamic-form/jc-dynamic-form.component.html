@@ -1,7 +1,7 @@
-<form [formGroup]="formContainer">
-    <ng-container jcDynamicInput *ngFor="let key of objectKeys(formContainer.controls)"
-    [group]="key"
-    [options]="formContainer.controls[key].options"></ng-container>
+<form [formGroup]="jcFormGroup">
+    <ng-container jcDynamicInput *ngFor="let controlName of objectKeys(jcFormGroup.controls)"
+    [jcFormControl]="jcFormGroup.controls[controlName]"
+    [jcFormGroup]="jcFormGroup"></ng-container>
 </form>
 
-<p *ngFor="let control of objectEntries(formContainer.controls)">{{control[0]}}:{{control[1].value}}</p>
+<p *ngFor="let control of objectEntries(jcFormGroup.controls)">{{control[0]}}:{{control[1].value}}</p>

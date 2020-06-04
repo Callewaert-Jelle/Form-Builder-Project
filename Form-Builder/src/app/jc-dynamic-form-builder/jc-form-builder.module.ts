@@ -4,7 +4,6 @@ import { DynamicFormComponent } from './jc-dynamic-form/jc-dynamic-form.componen
 import { DynamicTextInputComponent } from './inputs/dynamic-text-input/dynamic-text-input.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { JcDynamicInputDirective } from './jc-dynamic-input/jc-dynamic-input.directive';
-import { JcTextInputOptions } from './jc-input-options/jc-custom-input-options/jc-text-input-options';
 import { TextInputWrapperComponent } from './wrappers/text-input-wrapper/text-input-wrapper.component';
 
 @NgModule({

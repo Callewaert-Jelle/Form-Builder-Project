@@ -11,20 +11,22 @@ import { JcTextInputOptions } from './jc-dynamic-form-builder/jc-input-options/j
 })
 export class AppComponent implements OnInit {
 
-  formContainer: JcFormGroup;
+  jcFormGroup: JcFormGroup;
 
   text_placeholder: string;
   text_type: DynamicTextInputTypes;
 
   ngOnInit() {
-    this.formContainer = new JcFormBuilder()
-      .addTextInput('name', new JcTextInputOptions()
-        .addValue('xD')
+    this.jcFormGroup = new JcFormBuilder()
+      .addTextInput('name', new JcTextInputOptions('name', 'name')
         .addPlaceholder('xD'))
-      .addTextInput('email', new JcTextInputOptions()
+      .addTextInput('email', new JcTextInputOptions('email', 'email')
         .addType(DynamicTextInputTypes.password))
       .addTextInput('more')
       .getResult();
-    console.log(this.formContainer)
+  }
+
+  logToConsole() {
+    console.log(this.jcFormGroup)
   }
 }

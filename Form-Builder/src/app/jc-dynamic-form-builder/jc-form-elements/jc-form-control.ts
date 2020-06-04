@@ -9,10 +9,12 @@ export enum JcFormControlTypes {
 
 export class JcFormControl extends FormControl {
     
+    name: string;
     type: JcFormControlTypes;
     options: JcInputOptions;
 
     addOptions(options: JcInputOptions) {
         this.options = options;
     }
+    
 }

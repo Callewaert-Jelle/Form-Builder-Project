@@ -1,4 +1,8 @@
-<jc-dynamic-form [formContainer]="formContainer"></jc-dynamic-form>
+<form [formGroup]='jcFormGroup'>
+    <jc-dynamic-form [jcFormGroup]="jcFormGroup"></jc-dynamic-form>
+</form>
+
+<button (click)="logToConsole()">console</button>
 
 <!-- IGNORE
 
