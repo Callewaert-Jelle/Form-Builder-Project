@@ -1,6 +1,5 @@
 <form [formGroup]="jcFormGroup">
     <ng-container jcDynamicInput *ngFor="let controlName of objectKeys(jcFormGroup.controls)"
-    [jcFormControlName]='controlName'
     [jcFormControl]="jcFormGroup.controls[controlName]"
     [jcFormGroup]="jcFormGroup"></ng-container>
 </form>

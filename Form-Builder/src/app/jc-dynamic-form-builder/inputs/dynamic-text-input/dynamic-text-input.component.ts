@@ -20,7 +20,6 @@ export class DynamicTextInputComponent implements OnInit, ControlValueAccessor {
 
   private value: string;
 
-  @Input() jcFormControlName: string;
   @Input() jcFormControl: JcFormControl;
   @Input() jcFormGroup: JcFormGroup;
 
