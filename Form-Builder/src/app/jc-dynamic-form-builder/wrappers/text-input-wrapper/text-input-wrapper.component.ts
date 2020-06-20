@@ -15,7 +15,6 @@ export class TextInputWrapperComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // console.log(this.jcFormGroup)
   }
 
 }
