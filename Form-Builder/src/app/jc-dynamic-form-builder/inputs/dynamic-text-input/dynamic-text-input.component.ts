@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
 import { JcFormControl } from '../../jc-form-elements/jc-form-control';
+import { JcFormGroup } from '../../jc-form-elements/jc-form-group';
 
 export enum DynamicTextInputTypes {
   text = 'text',
@@ -19,7 +20,9 @@ export class DynamicTextInputComponent implements OnInit, ControlValueAccessor {
 
   private value: string;
 
+  @Input() jcFormControlName: string;
   @Input() jcFormControl: JcFormControl;
+  @Input() jcFormGroup: JcFormGroup;
 
   @Input() placeholder?: string;
   @Input() isDisabled?: boolean;
@@ -31,6 +34,7 @@ export class DynamicTextInputComponent implements OnInit, ControlValueAccessor {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.jcFormControl)
     if (!this.value) {
       this.value = this.jcFormControl.value
     }

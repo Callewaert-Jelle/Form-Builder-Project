@@ -9,6 +9,7 @@ import { JcFormControl } from '../../jc-form-elements/jc-form-control';
 })
 export class TextInputWrapperComponent implements OnInit {
 
+  @Input() jcFormControlName: string;
   @Input() jcFormGroup: JcFormGroup;
   @Input() jcFormControl: JcFormControl;
 

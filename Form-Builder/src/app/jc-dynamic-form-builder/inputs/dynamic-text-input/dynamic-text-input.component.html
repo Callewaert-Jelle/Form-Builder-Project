@@ -1,5 +1,9 @@
+{{jcFormControlName}}
+<form [formGroup]='jcFormGroup'>
 <input
-    [value]='value'
+    [formControlName]='jcFormControlName'
+
+    (value)='value'
     placeholder={{placeholder}}
     type={{type}}>
-    
+</form>    

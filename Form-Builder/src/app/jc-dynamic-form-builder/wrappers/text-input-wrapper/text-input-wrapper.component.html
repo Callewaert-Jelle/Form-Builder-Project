@@ -2,7 +2,9 @@
     <label>
         {{jcFormControl.option?.label}}
         <app-dynamic-text-input
+            [jcFormControlName]='jcFormControlName'
             [jcFormControl]='jcFormControl'
+            [jcFormGroup]='jcFormGroup'
 
             [placeholder]='jcFormControl.options?.placeholder'
             [isDisabled]='jcFormControl.options?.isDisabled'
