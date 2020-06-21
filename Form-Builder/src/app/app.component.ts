@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { DynamicTextInputTypes } from './jc-dynamic-form-builder/inputs/dynamic-text-input/dynamic-text-input.component';
-import { JcFormBuilder } from './jc-dynamic-form-builder/jc-form-builder/jc-form-builder';
-import { JcFormGroup } from './jc-dynamic-form-builder/jc-form-elements/jc-form-group';
-import { JcTextInputOptions } from './jc-dynamic-form-builder/jc-input-options/jc-custom-input-options/jc-text-input-options';
+import { DynamicTextInputTypes } from './jc-forms/fields/inputs/dynamic-text-input/dynamic-text-input.component';
+import { JcFormBuilder } from './jc-forms/models/jc-form-builder/jc-form-builder';
+import { JcFormGroup } from './jc-forms/extentions/jc-form-group';
+import { JcTextInputOptions } from './jc-forms/models/jc-input-options/jc-custom-input-options/jc-text-input-options';
 import { Validators } from '@angular/forms';
 
 @Component({

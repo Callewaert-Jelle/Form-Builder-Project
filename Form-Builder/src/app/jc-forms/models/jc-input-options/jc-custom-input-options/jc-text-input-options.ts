@@ -1,5 +1,5 @@
 import { JcInputOptions } from '../jc-input-options';
-import { DynamicTextInputTypes } from '../../inputs/dynamic-text-input/dynamic-text-input.component';
+import { DynamicTextInputTypes } from '../../../fields/inputs/dynamic-text-input/dynamic-text-input.component';
 
 export class JcTextInputOptions extends JcInputOptions {
 

@@ -1,6 +1,7 @@
-import { FormBuilder, FormControl, Validators, FormArray, ValidatorFn } from '@angular/forms';
-import { JcFormControl } from '../jc-form-elements/jc-form-control';
-import { JcFormGroup } from '../jc-form-elements/jc-form-group';
+import { ValidatorFn } from '@angular/forms';
+
+import { JcFormControl } from '../../extentions/jc-form-control';
+import { JcFormGroup } from '../../extentions/jc-form-group';
 import { JcTextInputOptions } from '../jc-input-options/jc-custom-input-options/jc-text-input-options';
 import { IJcFormBuilder } from './ijc-form-builder';
 

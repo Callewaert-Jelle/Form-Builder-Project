@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { JcFormGroup } from '../jc-form-elements/jc-form-group';
+import { JcFormGroup } from '../../extentions/jc-form-group';
 
 @Component({
   selector: 'jc-dynamic-form',

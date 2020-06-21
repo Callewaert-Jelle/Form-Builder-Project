@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
-import { JcFormGroup } from '../../jc-form-elements/jc-form-group';
-import { JcFormControl } from '../../jc-form-elements/jc-form-control';
+
+import { JcFormGroup } from '../../../extentions/jc-form-group';
+import { JcFormControl } from '../../../extentions/jc-form-control';
 
 export enum DynamicTextInputTypes {
   text = 'text',
