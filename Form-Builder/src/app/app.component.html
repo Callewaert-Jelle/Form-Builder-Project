@@ -1,1 +1,8 @@
-<app-dynamic-form></app-dynamic-form>
+<form [formGroup]='jcFormGroup' (submit)='submitForm()'>
+    <jc-dynamic-form [jcFormGroup]="jcFormGroup"></jc-dynamic-form>
+    <button type="submit" [attr.disabled]="jcFormGroup.valid ? null : ''">Submit</button>
+</form>
+
+<p *ngFor="let control of objectEntries(jcFormGroup.controls)">{{control[0]}}: {{control[1].value}}</p>
+
+valid form: {{jcFormGroup.valid}}
