@@ -1,5 +1,6 @@
 import { FormControl } from '@angular/forms'
-import { JcInputOptions } from '../jc-input-options/jc-input-options';
+
+import { JcInputOptions } from '../models/jc-input-options/jc-input-options';
 
 export enum JcFormControlTypes {
     text = 'Text',

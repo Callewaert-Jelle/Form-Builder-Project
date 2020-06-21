@@ -1,6 +1,6 @@
 import { FormGroup } from '@angular/forms'
+
 import { JcFormControl } from './jc-form-control'
-import { JcInputOptions } from '../jc-input-options/jc-input-options';
 
 export class JcFormGroup extends FormGroup {
 
