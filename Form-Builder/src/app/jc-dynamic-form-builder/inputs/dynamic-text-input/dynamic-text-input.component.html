@@ -1,0 +1,12 @@
+<form [formGroup]='jcFormGroup'>
+    <input
+        [formControl]='jcFormControl'
+
+        [attr.disabled]="isDisabled ? '' : null"
+        [attr.readonly]="isReadonly ? '' : null"
+        
+        (value)='value'
+        placeholder={{placeholder}}
+        type={{type}}>
+    {{jcFormControl.valid}} 
+</form>

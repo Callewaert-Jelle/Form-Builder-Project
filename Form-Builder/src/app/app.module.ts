@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-import { FormBuilderModuleModule } from './form-builder-module/form-builder-module.module';
+import { JcFormBuilderModule } from './jc-dynamic-form-builder/jc-form-builder.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,8 @@ import { FormBuilderModuleModule } from './form-builder-module/form-builder-modu
   ],
   imports: [
     BrowserModule,
-    FormBuilderModuleModule
+    JcFormBuilderModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
