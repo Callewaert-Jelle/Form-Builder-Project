@@ -1,8 +1,11 @@
 <form [formGroup]='jcFormGroup'>
-<input
-    [formControl]='jcFormControl'
+    <input
+        [formControl]='jcFormControl'
 
-    (value)='value'
-    placeholder={{placeholder}}
-    type={{type}}>
+        [attr.disabled]="isDisabled ? '' : null"
+        [attr.readonly]="isReadonly ? '' : null"
+        
+        (value)='value'
+        placeholder={{placeholder}}
+        type={{type}}>
 </form>    

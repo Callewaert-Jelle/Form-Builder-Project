@@ -19,7 +19,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.jcFormGroup = new JcFormBuilder()
       .addTextInput('name', new JcTextInputOptions('name', 'name')
-        .addPlaceholder('xD'))
+        .addPlaceholder('xD')
+        .makeDisabled())
       .addTextInput('email', new JcTextInputOptions('email', 'email')
         .addType(DynamicTextInputTypes.password))
       .addTextInput('more')
