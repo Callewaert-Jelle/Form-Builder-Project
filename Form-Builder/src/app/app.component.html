@@ -1,14 +1,8 @@
-<form [formGroup]='jcFormGroup'>
+<form [formGroup]='jcFormGroup' (submit)='submitForm()'>
     <jc-dynamic-form [jcFormGroup]="jcFormGroup"></jc-dynamic-form>
+    <button type="submit" [attr.disabled]="jcFormGroup.valid ? null : ''">Submit</button>
 </form>
 
-<button (click)="logToConsole()">console</button>
+<p *ngFor="let control of objectEntries(jcFormGroup.controls)">{{control[0]}}: {{control[1].value}}</p>
 
-<!-- IGNORE
-
-<app-dynamic-text-input 
-    placeholder={{text_placeholder}}
-    type={{text_type}}>
-</app-dynamic-text-input>
-
--->
+valid form: {{jcFormGroup.valid}}

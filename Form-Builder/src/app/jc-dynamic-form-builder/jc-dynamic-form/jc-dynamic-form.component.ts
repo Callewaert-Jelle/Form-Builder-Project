@@ -10,7 +10,6 @@ export class DynamicFormComponent implements OnInit {
   @Input() jcFormGroup: JcFormGroup;
   
   objectKeys = Object.keys;
-  objectEntries = Object.entries;
 
   constructor() {
   }

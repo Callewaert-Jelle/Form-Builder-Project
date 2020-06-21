@@ -1,4 +1,4 @@
-import { FormBuilder, FormControl, Validators, FormArray } from '@angular/forms';
+import { FormBuilder, FormControl, Validators, FormArray, ValidatorFn } from '@angular/forms';
 import { JcFormControl } from '../jc-form-elements/jc-form-control';
 import { JcFormGroup } from '../jc-form-elements/jc-form-group';
 import { JcTextInputOptions } from '../jc-input-options/jc-custom-input-options/jc-text-input-options';
@@ -13,13 +13,13 @@ export class JcFormBuilder implements IJcFormBuilder {
         return this;
     }
 
-    addTextInput(name: string, options?: JcTextInputOptions): JcFormBuilder {
+    addTextInput(name: string, options?: JcTextInputOptions, validators?: ValidatorFn | ValidatorFn[]): JcFormBuilder {
         if (options) {
-            let jcFormControl = new JcFormControl(options.getValue(), [Validators.required]);
+            let jcFormControl = new JcFormControl(options.getValue(), validators);
             jcFormControl.addOptions(options);
             this.jcFormGroup.addControl(name, jcFormControl)
         } else { //empty formcontrol
-            this.jcFormGroup.addControl(name, new JcFormControl('', Validators.required));
+            this.jcFormGroup.addControl(name, new JcFormControl('', validators));
         }
         return this;
     }
