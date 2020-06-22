@@ -1,0 +1,12 @@
+<form [formGroup]='jcFormGroup'>
+    <input
+        [formControl]='jcFormControl'
+
+        (keydown)='onKeyDown($event)'
+        
+        [(value)]='value'
+        [attr.disabled]="isDisabled ? '' : null"
+        [attr.readonly]="isReadonly ? '' : null"
+        placeholder={{placeholder}}>
+    {{jcFormControl.valid}} 
+</form>

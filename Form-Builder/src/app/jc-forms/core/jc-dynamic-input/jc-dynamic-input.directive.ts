@@ -1,17 +1,21 @@
 import { Directive, Input, OnInit, ComponentFactoryResolver, ComponentRef, ViewContainerRef } from '@angular/core';
 
-import { DynamicTextInputComponent } from '../../fields/inputs/dynamic-text-input/dynamic-text-input.component';
-import { TextInputWrapperComponent } from '../../fields/wrappers/text-input-wrapper/text-input-wrapper.component';
 import { JcFormGroup } from '../../extentions/jc-form-group';
 import { JcFormControl } from '../../extentions/jc-form-control';
+
+import { TextInputWrapperComponent } from '../../fields/wrappers/text-input-wrapper/text-input-wrapper.component';
+import { NumberInputWrapperComponent } from '../../fields/wrappers/number-input-wrapper/number-input-wrapper.component'
 
 @Directive({
   selector: '[jcDynamicInput]'
 })
 export class JcDynamicInputDirective implements OnInit {
+
   mapper = {
-    text: DynamicTextInputComponent
+    text: TextInputWrapperComponent,
+    number: NumberInputWrapperComponent
   }
+  
   @Input() jcFormGroup: JcFormGroup;
   @Input() jcFormControl: JcFormControl;
 

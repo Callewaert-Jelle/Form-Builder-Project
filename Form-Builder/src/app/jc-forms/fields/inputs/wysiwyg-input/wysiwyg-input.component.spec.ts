@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DynamicTextInputComponent } from './dynamic-text-input.component';
+import { WysiwygInputComponent } from './wysiwyg-input.component';
 
-describe('DynamicTextInputComponent', () => {
-  let component: DynamicTextInputComponent;
-  let fixture: ComponentFixture<DynamicTextInputComponent>;
+describe('WysiwygInputComponent', () => {
+  let component: WysiwygInputComponent;
+  let fixture: ComponentFixture<WysiwygInputComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DynamicTextInputComponent ]
+      declarations: [ WysiwygInputComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DynamicTextInputComponent);
+    fixture = TestBed.createComponent(WysiwygInputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

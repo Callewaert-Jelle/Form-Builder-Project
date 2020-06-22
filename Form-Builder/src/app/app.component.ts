@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DynamicTextInputTypes } from './jc-forms/fields/inputs/dynamic-text-input/dynamic-text-input.component';
+import { DynamicTextInputTypes } from './jc-forms/fields/inputs/text-input/text-input.component';
 import { JcFormBuilder } from './jc-forms/models/jc-form-builder/jc-form-builder';
 import { JcFormGroup } from './jc-forms/extentions/jc-form-group';
 import { JcTextInputOptions } from './jc-forms/models/jc-input-options/jc-custom-input-options/jc-text-input-options';

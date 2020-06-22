@@ -1,13 +1,14 @@
 <label>
     {{jcFormControl.options?.label}}
-    <app-dynamic-text-input 
+    <jc-text-input 
         [jcFormGroup]='jcFormGroup'
         [jcFormControl]='jcFormControl'
+        
         [placeholder]='jcFormControl.options?.placeholder'
         [isDisabled]='jcFormControl.options?.isDisabled'
         [isReadonly]='jcFormControl.options?.isReadonly'
         [hasAutocomplete]='jcFormControl.options?.hasAutocomplete'
         [type]='jcFormControl.options?.type'
-        [pattern]='jcFormControl.options?.pattern'></app-dynamic-text-input>
+        [pattern]='jcFormControl.options?.pattern'></jc-text-input>
     <!-- <validation [options]='options' [jcFormGroup]='jcFormGroup' -->
 </label>

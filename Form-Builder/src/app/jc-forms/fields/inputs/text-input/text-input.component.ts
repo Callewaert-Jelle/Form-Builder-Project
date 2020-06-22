@@ -13,11 +13,11 @@ export enum DynamicTextInputTypes {
 }
 
 @Component({
-  selector: 'app-dynamic-text-input',
-  templateUrl: './dynamic-text-input.component.html',
-  styleUrls: ['./dynamic-text-input.component.css']
+  selector: 'jc-text-input',
+  templateUrl: './text-input.component.html',
+  styleUrls: ['./text-input.component.css']
 })
-export class DynamicTextInputComponent implements OnInit, ControlValueAccessor {
+export class TextInputComponent implements OnInit, ControlValueAccessor {
 
   private value: string;
 
